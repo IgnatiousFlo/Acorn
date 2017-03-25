@@ -1,6 +1,6 @@
 """
 This function shows the numbers of signatures on a petition to have a 2nd EU referendum
-then gives the percentage of votes and of the populatin as a whole that have signed.
+then gives the percentage of votes and of the population as a whole that have signed.
 The source for the number of registered voters is:
 http://www.independent.co.uk/news/uk/politics/eu-referendum-turnout-vote-polling-britain-
 future-live-brexit-remain-leave-a7095146.html
