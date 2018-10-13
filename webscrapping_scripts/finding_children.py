@@ -24,5 +24,6 @@ def find_children():
             titles.append(child.text)
     print(titles)
 
+
 if __name__ == '__main__':
     find_children()
