@@ -7,7 +7,7 @@ future-live-brexit-remain-leave-a7095146.html
 Also, from the more recent trump petition https://petition.parliament.uk/petitions/171928
 """
 
-from urllib import urlopen
+from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
 
