@@ -18,8 +18,8 @@ def percentage_vote_brexit():
 
     petitionsoup = BeautifulSoup(pagesource, 'html.parser')
     
-    signitures = petitionsoup.select('.signature-count-number')
-    stripped_sig = signitures[0].text.strip().split(' ')
+    signatures = petitionsoup.select('.signature-count-number')
+    stripped_sig = signatures[0].text.strip().split(' ')
     formatted_sig = stripped_sig[0].replace(',', '')
     print('Brexit'), formatted_sig
     sig_float = float(formatted_sig)
@@ -43,20 +43,23 @@ def percentage_vote_trump():
     url = 'https://petition.parliament.uk/petitions/171928'
     pagesource = urlopen(url).read()
     petitionsoup = BeautifulSoup(pagesource, 'html.parser')
-    signitures = petitionsoup.select('.signature-count-number')
-    stripped_sig = signitures[0].text.strip().split(' ')
+    signatures = petitionsoup.select('.signature-count-number')
+
+    stripped_sig = signatures[0].text.strip().split(' ')
     formatted_sig = stripped_sig[0].replace(',', '')
-    print ('Trump'), (formatted_sig)
+    print('Trump'), formatted_sig
     sig_float = float(formatted_sig)
 
     population = 65107000
     voters = 46499537
 
     voters_percent = round(sig_float/voters*100, 2)
-    print (str(voters_percent) + '%')
+    print(str(voters_percent) + '%')
 
     pop_percent = round(sig_float/population*100, 2)
-    print (str(pop_percent) + '%')
+    print(str(pop_percent) + '%')
+
 
 if __name__ == '__main__':
+
     percentage_vote_trump()

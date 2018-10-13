@@ -9,9 +9,9 @@ def find_children():
     url = 'http://www.naomiklein.org/main'
     pagesource = urlopen(url).read()
     naomi_soup = BeautifulSoup(pagesource, 'html.parser')
-
+    print(naomi_soup)
     naomi_title = naomi_soup.find('title').string
-    print(naomi_title)
+    #ßprint(naomi_title)
 
     naomi_h2s = naomi_soup.find_all('h2')
     for h2s in naomi_h2s:
