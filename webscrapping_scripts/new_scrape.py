@@ -15,19 +15,19 @@ def sunrise():
     # find the heading
     print(the_soup.findAll("h2")[1])
 
-    #
-    print(the_soup.find("data-day=\"13\""))
+    # find sunrise time
+    print(the_soup.find("data-day"))
 
-    now = datetime.datetime.now()
-    print(now.strftime("%d"))
+    #
+    def today():
+        now = datetime.datetime.now()
+        return now.strftime("")
 
 """
 for td in the_soup:
     if tr data day == today:
         print(time)
 """
-
-
 
 if __name__ == '__main__':
     sunrise()
