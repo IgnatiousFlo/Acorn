@@ -1,3 +1,5 @@
+from datetime import datetime
+
 def binary(n):
     print(bin(n))
 
@@ -15,3 +17,14 @@ def odd_nums(x, y):
 odd_nums(1, 45)
 
 
+def time_left():
+    today = datetime.today()
+    str_today = today.strftime("%d %B %Y")
+    moving = datetime(2019, 6, 15)
+    str_moving = moving.strftime("%d %B %Y")
+    diff = abs(today - moving).days
+
+    print(f"Today is {str_today} and I move on {str_moving} , which is in {diff} days")
+
+
+time_left()
